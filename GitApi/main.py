@@ -22,4 +22,18 @@ def list_github_repositories(token):
 github_token = "YOUR_TOKEN"
 
 
-list_github_repositories(github_token)
+def pullRequest():
+    url = "https://api.github.com/repos/kubernetes/kubernetes/pulls"
+
+    try:
+        response = requests.get(url)
+        # print(response.json())
+        for user in response.json():
+            print(user["user"]["login"])
+    except Exception as e:
+        print(e)
+
+
+# list_github_repositories(github_token)
+
+pullRequest()

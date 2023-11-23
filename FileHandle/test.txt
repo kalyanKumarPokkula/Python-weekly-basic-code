@@ -1,0 +1,5 @@
+The above line of code will open file.
+txt and will assign the file handler to the variable called file.
+We can then call the write() method to modify our file programmatically.
+Hello World!
+Hello World!
